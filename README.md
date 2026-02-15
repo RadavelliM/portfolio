@@ -1,0 +1,1 @@
+Projeto pessoal em React + Vite de portfólio. Neste projeto, mostro minhas competências e habilidades, incluindo além de hard skills, as soft skills.
