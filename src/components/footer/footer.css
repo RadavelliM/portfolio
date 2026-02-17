@@ -1,0 +1,27 @@
+:root {
+    --navbarBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
+footer {
+    position: relative;
+    background-color: var(--navbarBG);
+    color: white;
+    height: 250px;
+    text-align: center;
+    border-top: 1px solid aqua;
+}
+
+footer .icons {
+    margin-top: -110px;
+}
+
+footer .navActions {
+    margin-top: 140px;
+}
+.msg .rights {
+    margin-top: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+

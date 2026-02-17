@@ -41,7 +41,8 @@ nav .brand:hover {
     margin-right: 30px;
     color: #f3737c;
     transition: 400ms;
-    display: inline-block;
+    display: inline-flex;
+    gap: 20px;
 }
 
 .navActions a:hover {

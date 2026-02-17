@@ -1,8 +1,10 @@
 import React from 'react'
 import './App.css'
-import Navbar from './components/navbar/navbar'
+import Navbar from './components/navbar/nav/navbar'
 import HeroSection from './components/heroSection/heroSection'
 import TechStack from './components/techStack/techStack'
+import DivisorSpace from './components/common/divisorSpace/divisorSpace'
+import Footer from './components/footer/footer'
 
 
 export default function App() {
@@ -10,7 +12,10 @@ export default function App() {
         <div className="container">
             <Navbar />
             <HeroSection />
+            <DivisorSpace space="300px"/>
             <TechStack />
+
+            <Footer />
         </div>
     )
 };
