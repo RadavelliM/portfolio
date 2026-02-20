@@ -12,7 +12,7 @@ const Div = styled.div`
 
     a:hover {
         color: #ad5158;
-        transform: translateY(-3px);
+        transform: translateY(-5px);
     }
 `
 

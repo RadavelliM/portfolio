@@ -1,9 +1,10 @@
 import React from 'react'
+
 import { FiGithub, FiLinkedin, FiMail } from 'react-icons/fi'
 import { AiFillGithub, AiFillLinkedin, AiFillMail } from 'react-icons/ai'
 import './icons.css'
 
-const SOCIAL_DATA = [
+const socialData = [
     {
         title: 'GitHub',
         link: 'https://github.com/RadavelliM/RadavelliM',
@@ -29,7 +30,7 @@ export default function Icons({ isFooter }) {
 
     return (
         <div className={containerClass}>
-            {SOCIAL_DATA.map(social => (
+            {socialData.map(social => (
                 <a
                     key={social.title}
                     title={social.title}

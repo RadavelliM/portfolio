@@ -1,6 +1,94 @@
+:root {
+    --navbarBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
 .techStack {
     transform: translateY(-30px);
-    background-color: #00030f;
     height: 500px;
     color: white;
+
+    display: flex;
+    position: relative;
+}
+
+.techStack {
+    background-color: #00030f;
+    min-height: 100vh;
+    color: white;
+    padding: 20px;
+    display: block;
+}
+
+.techIntroduction {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    gap: 140px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 100px auto;
+}
+
+.tech {
+    position: relative;
+    height: 230px;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+
+
+    height: 250px;
+    background-color: transparent;
+    clip-path: polygon(10% 0, 90% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 90%, 0 10%);
+    transition: 700ms;
+}
+
+.tech::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgb(0, 135, 135);
+    clip-path: inherit;
+    z-index: 0;
+    transition: 700ms;
+}
+
+.tech::after {
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: var(--navbarBG);
+    clip-path: inherit;
+    z-index: 1;
+}
+
+.tech > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.tech:hover {
+    transform: translateY(-15px);
+}
+
+.tech:hover::before {
+    background: aqua;
+}
+
+.tech p {
+    margin-left: 15px;
+    font-size: large;
+    transition: 500ms;
+    cursor: auto;
+}
+
+.tech p:hover {
+    transform: scale(0.95);
 }
