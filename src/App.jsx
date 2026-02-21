@@ -13,6 +13,7 @@ export default function App() {
             <HeroSection />
             <DivisorSpace space="300px"/>
             <TechStack />
+            <DivisorSpace space="300px"/>
 
             <Footer />
         </div>
