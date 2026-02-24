@@ -6,7 +6,8 @@ const navItems = [
   { label: "Início", href: "#home" },
   { label: "Sobre", href: "#about" },
   { label: "Formação", href: "#education" },
-  { label: "Stack", href: "#techStack" }
+  { label: "Stack", href: "#techStack" },
+  { label: "Contato", href: "#contact" }
 ];
 
 export default function Actions({ isNav }) {

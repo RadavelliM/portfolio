@@ -6,6 +6,7 @@ import HeroSection from './components/heroSection/heroSection'
 import TechStack from './components/techStack/techStack'
 import About from './components/about/about'
 import Education from './components/education/education'
+import Contact from './components/contact/contact'
 import Footer from './components/footer/footer'
 
 
@@ -20,7 +21,9 @@ export default function App() {
             <Education />
             <DivisorSpace space="400px"/>
             <TechStack />
-            <DivisorSpace space="350px"/>
+            <DivisorSpace space="150px"/>
+            <Contact />
+            <DivisorSpace space="400px"/>
             <Footer />
         </div>
     )
