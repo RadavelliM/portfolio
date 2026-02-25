@@ -23,7 +23,7 @@ export default function SPA() {
             <TechStack />
             <DivisorSpace space="150px"/>
             <Contact />
-            <DivisorSpace space="400px"/>
+            <DivisorSpace space="100px"/>
             <Footer />
         </div>
     )

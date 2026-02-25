@@ -83,3 +83,12 @@
 .courseBox:hover {
     transform: translateY(-10px);
 }
+
+.graduationIcon {
+    color: aqua;
+    background-color: var(--iconBG);
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 22px;
+    flex-shrink: 0;
+}

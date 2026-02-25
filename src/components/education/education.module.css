@@ -1,9 +1,3 @@
-:root {
-    --graduationBG: rgb(59, 59, 59);
-    --iconBG: rgb(42, 42, 42);
-    --letterColor: white;
-}
-
 .education {
     text-align: center;
     font-size: 30px;

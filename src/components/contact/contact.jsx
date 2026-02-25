@@ -1,17 +1,20 @@
 import React from 'react'
 
-import './contact.css'
+import styles from './contact.module.css'
 import Form from './form/form'
 import Icons from '../heroSection/icons/icons'
 
 export default function Contact() {
     return (
-        <div id='contact' className="contact">
+        <div id='contact' className={styles.contact}>
             <h1>Contato</h1>
 
             <Form />
 
-            <Icons />
+            <div className={styles.iconsWrapper}>
+                <Icons />
+            </div>
+
         </div>
     )
 };
