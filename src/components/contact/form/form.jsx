@@ -27,7 +27,7 @@ function FormField({ type, name, id, label }) {
                 <>
                     <textarea
                         name={name}
-                        id={id}
+                        id={styles.content}
                         placeholder=""
                     />
                     <label htmlFor={id}>{label}</label>

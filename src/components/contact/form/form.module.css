@@ -33,6 +33,7 @@ input {
     background-color: transparent;
     border: 3px solid rgb(0, 135, 135);
     color: white;
+    padding-left: 10px;
 }
 
 
@@ -56,6 +57,12 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label {
     padding: 10px;
 }
 
+input:focus {
+    outline: none;
+    border: 2px solid aqua;
+}
+
+
 textarea:focus ~ label,
 textarea:not(:placeholder-shown) ~ label {
     background-color: #00030f;
@@ -63,6 +70,20 @@ textarea:not(:placeholder-shown) ~ label {
     margin-left: 20px;
     font-size: 19px;
     padding: 0px 10px 0px 10px;
+}
+
+#content:focus {
+    outline: none;
+    border: 2px solid aqua;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 #formSubmit {

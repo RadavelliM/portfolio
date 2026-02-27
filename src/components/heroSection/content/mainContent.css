@@ -48,3 +48,44 @@ img {
 
     text-align: center;
 }
+
+
+@media (max-width: 800px) {
+    .starterText {
+        top: 10%;
+    }
+
+    .mainContentText {
+        font-size: 25px;
+    }
+
+    .mainText {
+        font-size: 23px;
+        width: 95%;
+    }
+}
+
+
+@media (max-width: 1000px) {
+    .starterText {
+        top: 10%;
+    }
+
+    .mainContentText {
+        width: 80%;
+    }
+
+    .mainText {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1200px) {
+    .starterText {
+        top: 10%;
+    }
+
+    .mainContentText {
+        margin-top: 30px;
+    }
+}

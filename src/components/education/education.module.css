@@ -11,3 +11,15 @@
 .educationInfo {
     font-size: 21px;
 }
+
+@media (max-width: 500px) {
+    .education {
+        margin-top: 600px;
+    }
+}
+
+@media (max-width: 900px) {
+    .education {
+        margin-top: 300px;
+    }
+}
