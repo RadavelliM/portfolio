@@ -45,10 +45,8 @@ export default function MainContent() {
                 transition={{delay: 0.5, duration: 2, ease: "easeOut"}}
 
                 className="mainContentText">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Molestiae fugiat laboriosam quam, minima pariatur illum quaerat,
-                ea assumenda consequuntur doloribus quibusdam adipisci error modi
-                aspernatur odit voluptas, amet blanditiis maxime!</p>
+                <p>Desenvolvedor Fullstack construindo aplicações modernas e
+                    responsivas para a web com as melhores tecnologias </p>
             </motion.div>
         </div>
     );
