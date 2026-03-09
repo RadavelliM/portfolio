@@ -9,6 +9,7 @@ const navItems = [
   { label: "Sobre", href: "#about" },
   { label: "Formação", href: "#education" },
   { label: "Stack", href: "#techStack" },
+  { label: "Idiomas", href: "#idioms" },
   { label: "Contato", href: "#contact" }
 ];
 

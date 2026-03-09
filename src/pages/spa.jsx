@@ -7,6 +7,7 @@ import TechStack from '../components/techStack/techStack'
 import About from '../components/about/about'
 import Education from '../components/education/education'
 import Contact from '../components/contact/contact'
+import Languages from '../components/languages/languages'
 import Footer from '../components/footer/footer'
 
 
@@ -21,9 +22,11 @@ export default function SPA() {
             <Education />
             <DivisorSpace space="400px"/>
             <TechStack />
-            <DivisorSpace space="150px"/>
+            <DivisorSpace space="300px"/>
+            <Languages />
+            <DivisorSpace space="200px"/>
             <Contact />
-            <DivisorSpace space="100px"/>
+            <DivisorSpace space="200px"/>
             <Footer />
         </div>
     )

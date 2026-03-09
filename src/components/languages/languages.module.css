@@ -1,0 +1,139 @@
+:root {
+    --graduationBG: rgb(59, 59, 59);
+    --iconBG: rgb(42, 42, 42);
+    --letterColor: white;
+}
+
+.languageTitle {
+    font-size: 55px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+    color: rgb(168, 168, 168);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.languages {
+    color: white;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.languageInfo {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.languageText {
+    position: relative;
+    text-align: center;
+    margin-bottom: 75px;
+}
+
+
+
+.language p .iconSpan {
+    color: aqua;
+    background-color: var(--iconBG);
+    padding: 5px;
+    border-radius: 7px;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.language p .spanP {
+    position: absolute;
+    margin-left: -40px;
+    margin-top: -5px;
+}
+
+.levelSpan {
+    position: relative;
+    display: block;
+}
+
+.language p .idiom{
+    display: flex;
+    justify-self: center;
+}
+
+.language p {
+    font-size: 22px;
+    width: 100%;
+}
+
+.language {
+    width: 200px;
+    height: 200px;
+
+    background-color: var(--graduationBG);
+    gap: 25px;
+    position: relative;
+
+    display: grid;
+    place-self: center;
+
+    text-align: center;
+    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 70% 100%, 15% 100%, 0 85%, 0% 30%);
+    transition: 600ms;
+}
+
+.language::before {
+    content: "";
+    inset: 0;
+    clip-path: inherit;
+    position: absolute;
+    background: rgb(0, 135, 135);
+    z-index: 0;
+    transition: 600ms;
+}
+
+.language::after {
+    content: "";
+    clip-path: inherit;
+    inset: 2px;
+    position: absolute;
+    background-color: var(--graduationBG);
+    z-index: 1;
+}
+
+.language > * {
+    position: relative;
+    z-index: 2;
+}
+
+.language:hover::before {
+    background: aqua;
+}
+
+.language:hover {
+    transform: translateY(-10px);
+}
+
+
+@media (max-width: 500px) {
+    .languageTitle {
+        font-size: 55px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .languageInfo {
+        gap: 40px;
+    }
+
+    .languageText {
+        margin-bottom: 50px;
+    }
+}

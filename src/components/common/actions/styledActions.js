@@ -17,7 +17,8 @@ const Div = styled.div`
 
     @media (max-width: 500px) {
         a {
-            font-size: ${props => props.isNav ? '0px' : '16px'};
+            font-size: ${props => props.isNav ? '0px' : '20px'};
+            margin-bottom: 10px;
             gap: 30px;
         }
     }

@@ -30,3 +30,10 @@ footer .navActions {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
+
+
+@media (max-width: 500px) {
+    .msg .rights {
+    margin-top: 15px;
+}
+}

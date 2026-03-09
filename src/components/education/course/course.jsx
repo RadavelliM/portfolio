@@ -23,9 +23,44 @@ const coursesInfo = [
     }
 ];
 
-export default function Courses() {
+function CoursesCard({ name, platform, description, situation, link, certificate }) {
     const iconClass = styles.graduationIcon;
 
+    return (
+        <div className={styles.courseBox}>
+            <p>
+                <span className={styles.first}><FaBook className={iconClass} /></span>
+                Curso: <span className={styles.second}>{name}</span>
+            </p>
+
+            <p>
+                <span className={styles.first}><LuComputer className={iconClass} /></span>
+                Plataforma: <span className={styles.second}>{platform}</span>
+            </p>
+
+            <p>
+                <span className={styles.first}><FaBookOpen className={iconClass} /></span>
+                Descrição: <span className={styles.second}>{description}</span>
+            </p>
+
+            {situation ? (
+                <p>
+                    <span className={styles.first}><FaCertificate className={iconClass} /></span>
+                    Situação: <span className={styles.second}>{situation}</span>
+                </p>
+            ) : (
+                <p>
+                    <span className={styles.first}><FaCertificate className={iconClass} /></span>
+                    Situação: <span className={styles.second}>
+                        <a href={link} target='_blank' rel="noreferrer">{certificate}</a>
+                    </span>
+                </p>
+            )}
+        </div>
+    )
+}
+
+export default function Courses() {
     return (
         <div className={styles.coursesInfo}>
             <motion.h1
@@ -43,36 +78,18 @@ export default function Courses() {
 
                 {coursesInfo.map((info, index) => (
                     <motion.div
-                    key={index} className={styles.courseBox}>
+                    key={index}>
 
-                        <p>
-                            <span className={styles.first}><FaBook className={iconClass} /></span>
-                            Curso: <span className={styles.second}>{info.name}</span>
-                        </p>
+                    <CoursesCard
+                        key={index}
+                        name={info.name}
+                        platform={info.platform}
+                        description={info.description}
+                        situation={info.situation}
+                        link={info.link}
+                        certificate={info.certificate}
+                    />
 
-                        <p>
-                            <span className={styles.first}><LuComputer className={iconClass} /></span>
-                            Plataforma: <span className={styles.second}>{info.platform}</span>
-                        </p>
-
-                        <p>
-                            <span className={styles.first}><FaBookOpen className={iconClass} /></span>
-                            Descrição: <span className={styles.second}>{info.description}</span>
-                        </p>
-
-                        {info.situation ? (
-                            <p>
-                                <span className={styles.first}><FaCertificate className={iconClass} /></span>
-                                Situação: <span className={styles.second}>{info.situation}</span>
-                            </p>
-                        ) : (
-                            <p>
-                                <span className={styles.first}><FaCertificate className={iconClass} /></span>
-                                Situação: <span className={styles.second}>
-                                    <a href={info.link} target='_blank' rel="noreferrer">{info.certificate}</a>
-                                </span>
-                            </p>
-                        )}
                     </motion.div>
                 ))}
             </motion.div>

@@ -41,7 +41,7 @@ function FormField({ type, name, id, label }) {
 
 export default function Form() {
     return (
-        <motion.form
+        <motion.form data-netlify="true"
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 1 }}

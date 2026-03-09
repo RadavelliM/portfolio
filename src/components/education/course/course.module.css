@@ -47,6 +47,19 @@
     transition: 0.6s;
 }
 
+.courseBox::after {
+    content: "";
+    clip-path: inherit;
+    position: absolute;
+    inset: 2px;
+    background: var(--graduationBG);
+}
+
+.courseBox > * {
+    position: relative;
+    z-index: 2;
+}
+
 .courseBox p {
     margin-top: -1px;
 }
@@ -68,18 +81,6 @@
     text-decoration: solid;
 }
 
-.courseBox::after {
-    content: "";
-    clip-path: inherit;
-    position: absolute;
-    inset: 2px;
-    background: var(--graduationBG);
-}
-
-.courseBox > * {
-    position: relative;
-    z-index: 2;
-}
 
 .courseBox:hover::before {
     background: aqua;
