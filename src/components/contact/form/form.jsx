@@ -74,7 +74,12 @@ export default function Form() {
 
     return (
         <>
-            <ToastContainer />
+            <ToastContainer
+                hideProgressBar={true}
+                autoClose={2000}
+                pauseOnHover={true}
+            />
+
             <motion.form
                 data-netlify="true"
                 name='contato'
