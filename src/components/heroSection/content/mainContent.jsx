@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 import Digital from '../../../assets/digital.png';
+
 import './mainContent.css';
 
 const titles = ["Dev Fullstack", "Desenvolvedor de Software", "Engenheiro de Software"];

@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react'
 
-
 import './heroSection.css'
 
 //  componentes da nav
-import Icons from './icons/icons';
-import ArrowDown from './icons/arrow';
 import MainContent from './content/mainContent';
+import Icons from './icons/icons';
+import DownloadButton from '../common/download/download';
+import ArrowDown from './icons/arrow';
 
 export default function HeroSection() {
 
@@ -14,6 +14,8 @@ export default function HeroSection() {
         <div className="heroSection">
 
             <MainContent />
+
+            <DownloadButton isAbout={true} />
 
             <Icons />
 
@@ -24,4 +26,3 @@ export default function HeroSection() {
         </div>
     )
 };
-

@@ -1,0 +1,60 @@
+.download {
+    position: absolute;
+    top: 63%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.downloadAbout {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.downloadBtn, .downloadBtnAbout {
+    width: 240px;
+    height: 45px;
+    border-radius: 10px;
+
+    background-color: var(--graduationBG);
+    border: 3px solid rgb(0, 135, 135);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    text-decoration: none;
+    color: white;
+
+    transition: 900ms;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.icon {
+    color: rgb(0, 135, 135);
+    transition: 600ms;
+}
+
+.downloadBtnAbout:hover {
+    border: 3px solid aqua;
+    transform: translateY(-10px);
+}
+
+.downloadBtn:hover {
+    transform: translateY(-10px);
+
+    border: 3px solid transparent;
+    background:
+        linear-gradient(#00030f) padding-box,
+        linear-gradient(90deg,
+            rgba(201,246,255,1) 0%,
+            rgba(9,9,121,1) 35%,
+            rgba(0,212,255,1) 100%);
+}
+
+.downloadBtn:hover .icon {
+    color: aqua;
+}

@@ -23,7 +23,7 @@ img {
 
 .mainText {
     position: absolute;
-    top: 30%;
+    top: 27%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -41,7 +41,7 @@ img {
     position: absolute;
     top: 51%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -70%);
     color: white;
     font-size: 30px;
     font-family: sans-serif;
@@ -49,6 +49,15 @@ img {
     text-align: center;
 }
 
+@media (max-width: 500px) {
+    .mainContentText {
+        transform: translate(-50%, -80%);
+    }
+
+    .mainText {
+        top: 26%;
+    }
+}
 
 @media (max-width: 800px) {
     .starterText {

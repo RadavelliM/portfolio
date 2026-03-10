@@ -3,6 +3,8 @@ import React from 'react'
 import { LuMapPin } from 'react-icons/lu'
 import { motion } from 'framer-motion'
 
+import DownloadButton from '../common/download/download'
+
 import styles from './about.module.css'
 
 
@@ -40,6 +42,8 @@ export default function About() {
             >
                 <p> <LuMapPin /> Joinville, SC - Brasil </p>
             </motion.address>
+
+
         </div>
     )
 };
