@@ -64,6 +64,5 @@ export default function Icons({ isFooter }) {
                 </a>
             ))}
         </motion.div>
-
     )
 };

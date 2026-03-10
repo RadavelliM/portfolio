@@ -1,8 +1,9 @@
 :root {
     --navbarBG: rgb(42, 42, 42);
     --letterColor: white;
-    --graduationBG: rgb(59, 59, 59);
+    --angle: 0deg;
 }
+
 
 form {
     display: grid;
@@ -86,11 +87,18 @@ input:-webkit-autofill:active {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+.formIcon {
+    color: rgb(0, 135, 135);
+    position: absolute;
+    margin-left: -40px;
+    transition: 600ms;
+}
+
 #formSubmit {
     margin-top: 35px;
     background-color: var(--graduationBG);
     color: rgb(168, 168, 168);
-    transition: 600ms;
+    transition: 900ms;
     width: 420px;
     border-radius: 10px;
     border: 3px solid rgb(0, 135, 135);
@@ -99,24 +107,21 @@ input:-webkit-autofill:active {
     cursor: pointer;
 }
 
-.formIcon {
-    color: rgb(0, 135, 135);
-    position: absolute;
-    margin-left: -40px;
-    transition: 600ms;
-}
 
 #formSubmit:hover {
     color: white;
     transform: translateY(-10px);
-    border: 3px solid aqua;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(#00030f) padding-box,
+        linear-gradient(90deg,rgba(201, 246, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+
 }
+
 
 #formSubmit:hover .formIcon {
     color:  aqua;
 }
-
-
 
 @media (max-width: 450px) {
     input {

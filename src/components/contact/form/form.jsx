@@ -41,12 +41,17 @@ function FormField({ type, name, id, label }) {
 
 export default function Form() {
     return (
-        <motion.form data-netlify="true"
+        <motion.form
+            data-netlify="true"
+            name='contato'
+            method='POST'
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ delay: 1, duration: 1 }}
             action=""
         >
+            <input type="hidden" name="form-name" value="contato" />
+
             {formFields.map((field, index) => (
                 <FormField
                     key={index}
