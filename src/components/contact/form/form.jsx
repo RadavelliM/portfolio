@@ -1,6 +1,11 @@
 import React from 'react'
+
 import { motion } from 'framer-motion'
 import { LuSend } from 'react-icons/lu'
+
+import { toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
+
 import styles from './form.module.css'
 
 const formFields = [
@@ -39,38 +44,68 @@ function FormField({ type, name, id, label }) {
     )
 }
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 export default function Form() {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": form.getAttribute("name"), ...data })
+        })
+        .then(() => {
+            toast.success("Mensagem enviada com sucesso!");
+            form.reset();
+        })
+        .catch((error) => {
+            toast.error("Erro ao enviar: " + error);
+        });
+    };
+
     return (
-        <motion.form
-            data-netlify="true"
-            name='contato'
-            method='POST'
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1, duration: 1 }}
-            action=""
-        >
-            <input type="hidden" name="form-name" value="contato" />
+        <>
+            <ToastContainer />
+            <motion.form
+                data-netlify="true"
+                name='contato'
+                method='POST'
+                initial={{ opacity: 0, x: -40 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 1, duration: 1 }}
+                action=""
+            >
+                <input type="hidden" name="form-name" value="contato" />
 
-            {formFields.map((field, index) => (
-                <FormField
-                    key={index}
-                    type={field.type}
-                    name={field.name}
-                    id={field.id}
-                    label={field.label}
-                />
-            ))}
+                {formFields.map((field, index) => (
+                    <FormField
+                        key={index}
+                        type={field.type}
+                        name={field.name}
+                        id={field.id}
+                        label={field.label}
+                    />
+                ))}
 
-            <div className={styles.formInput}>
-                <button
-                    id={styles.formSubmit}
-                    type="submit"
-                >
-                    <LuSend className={styles.formIcon} />
-                    Enviar Mensagem
-                </button>
-            </div>
-        </motion.form>
+                <div className={styles.formInput}>
+                    <button
+                        id={styles.formSubmit}
+                        type="submit"
+                    >
+                        <LuSend className={styles.formIcon} />
+                        Enviar Mensagem
+                    </button>
+                </div>
+            </motion.form>
+        </>
     )
 }

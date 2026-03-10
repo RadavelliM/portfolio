@@ -17,7 +17,22 @@
     position: relative;
 }
 
+.contactTitle {
+    margin-bottom: -5px;
+}
+
+.contactInfo {
+    color: rgba(168, 168, 168);
+    margin-bottom: 50px;
+    text-align: center;
+}
 
 .iconsWrapper {
     margin-top: 320px;
+}
+
+@media (max-width: 450px) {
+    .contactTitle {
+        font-size: 45px;
+    }
 }
