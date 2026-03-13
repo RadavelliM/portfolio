@@ -16,7 +16,7 @@ export default function Navbar({ isNotFound }) {
             </div>
 
             {isCollapsed
-                ? <NavMenu />
+                ? <NavMenu isNotFound={isNotFound} />
                 : <Actions isNav={true} isNotFound={isNotFound} />
             }
 

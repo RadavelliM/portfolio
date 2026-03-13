@@ -27,7 +27,12 @@ function CoursesCard({ name, platform, description, situation, link, certificate
     const iconClass = styles.graduationIcon;
 
     return (
-        <div className={styles.courseBox}>
+        <motion.div
+            className={styles.courseBox}
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 2, delay: 1}}
+        >
             <p>
                 <span className={styles.first}><FaBook className={iconClass} /></span>
                 Curso: <span className={styles.second}>{name}</span>
@@ -56,7 +61,7 @@ function CoursesCard({ name, platform, description, situation, link, certificate
                     </span>
                 </p>
             )}
-        </div>
+        </motion.div>
     )
 }
 
@@ -70,11 +75,7 @@ export default function Courses() {
             > Cursos Complementares
             </motion.h1>
 
-            <motion.div
-                initial={{opacity: 0, y: -40}}
-                whileInView={{opacity: 1, y: 0}}
-                transition={{delay: 1, duration: 2}}
-                className={styles.courses}>
+            <div className={styles.courses}>
 
                 {coursesInfo.map((info, index) => (
                     <motion.div
@@ -92,7 +93,7 @@ export default function Courses() {
 
                     </motion.div>
                 ))}
-            </motion.div>
+            </div>
         </div>
     );
 }

@@ -2,8 +2,9 @@ import React, {useEffect} from 'react'
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import SPA from './pages/spa';
-import NotFound from './pages/notFound404';
+import SPA from './pages/SPA/spa';
+import NotFound from './pages/notFound/notFoundMount';
+
 
 export default function App() {
 

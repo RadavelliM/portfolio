@@ -72,8 +72,8 @@ h2 {
 }
 
 .language {
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 250px;
 
     background-color: var(--graduationBG);
     gap: 25px;
@@ -95,6 +95,11 @@ h2 {
     background: rgb(0, 135, 135);
     z-index: 0;
     transition: 600ms;
+}
+
+.firstP {
+    margin-top: 40px;
+    position: absolute;
 }
 
 .language::after {

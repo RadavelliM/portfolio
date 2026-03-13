@@ -1,5 +1,7 @@
 import React, { useState, Fragment } from 'react'
 
+import { Link } from 'react-router-dom';
+
 import { Dialog, Transition } from '@headlessui/react'
 import { LuMenu, LuX } from 'react-icons/lu'
 import styles from './menu.module.css'
@@ -13,7 +15,7 @@ const navItems = [
   { label: "Contato", href: "#contact" }
 ];
 
-export default function NavMenu() {
+export default function NavMenu({ isNotFound }) {
     const [open, setOpen] = useState(false)
 
     return (
@@ -60,9 +62,12 @@ export default function NavMenu() {
                             </button>
 
                             <div className={styles.menuLinks}>
-                                {navItems.map((info, index) => (
+                                {isNotFound
+                                    ? <Link className='navActions' to="/">Página inicial</Link>
+                                    : navItems.map((info, index) => (
                                     <a key={index} href={info.href} onClick={() => setOpen(false)}>{info.label}</a>
-                                ))}
+                                ))
+                                }
                             </div>
                         </Dialog.Panel>
                     </Transition.Child>

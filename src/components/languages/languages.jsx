@@ -3,6 +3,8 @@ import React from 'react'
 import { FaBookOpen } from 'react-icons/fa';
 import { AiOutlineGlobal } from 'react-icons/ai'
 
+import { motion } from 'framer-motion'
+
 import styles from './languages.module.css'
 
 const languages = [
@@ -13,13 +15,18 @@ const languages = [
 
 function LanguageCard({ language, level }) {
     return (
-        <div className={styles.language}>
-            <p> <span className={styles.spanP}><AiOutlineGlobal className={styles.iconSpan} /></span>
+        <motion.div
+            className={styles.language}
+            initial={{opacity: 0}}
+            whileInView={{opacity: 1}}
+            transition={{duration: 2, delay: 1}}
+        >
+            <p className={styles.firstP}> <span className={styles.spanP}><AiOutlineGlobal className={styles.iconSpan} /></span>
             Idioma: <span className={styles.idiom}>{language}</span></p>
 
             <p> <span className={styles.spanP}><FaBookOpen className={styles.iconSpan} /></span>
             Nível: <span className={styles.levelSpan}>{level}</span></p>
-        </div>
+        </motion.div>
     )
 }
 

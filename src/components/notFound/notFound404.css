@@ -1,0 +1,15 @@
+.pageNotFound {
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notFoundMsg {
+    text-align: center;
+}
+
+.notFoundMsg h1 {
+    margin-top: 100px;
+}
