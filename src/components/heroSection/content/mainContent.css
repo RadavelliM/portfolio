@@ -6,6 +6,11 @@ img {
 
     display: inline-block;
     transform: translateY(-77px);
+    z-index: 9;
+}
+
+.mainContent {
+  overflow: hidden;
 }
 
 .starterText {

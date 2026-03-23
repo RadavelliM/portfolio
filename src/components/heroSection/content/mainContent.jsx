@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ReactTyped } from "react-typed";
 
 import Digital from '../../../assets/digital.png';
+import Galaxy from '../../galaxy/galaxy'
 
 import './mainContent.css';
 
@@ -24,6 +25,8 @@ export default function MainContent() {
 
     return (
         <div className="mainContent">
+
+
             <img src={Digital} alt="" />
 
             <div className="starterText">
