@@ -9,7 +9,7 @@ import './icons.css'
 const socialData = [
     {
         title: 'GitHub',
-        link: 'https://github.com/RadavelliM/RadavelliM',
+        link: 'https://github.com/RadavelliM',
         IconNormal: <FiGithub />,
         IconFooter: <AiFillGithub />
     },

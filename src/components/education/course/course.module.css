@@ -78,7 +78,7 @@
 
 .courseBox a {
     color: aqua;
-    text-decoration: solid;
+    text-decoration: underline !important;
 }
 
 

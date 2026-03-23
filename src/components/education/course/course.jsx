@@ -18,8 +18,8 @@ const coursesInfo = [
         name: "Git & GitHub",
         platform: "Udemy",
         description: "Controle de versão, branchs, versionamento, rebase, servidores e commits.",
-        certificate: 'Concluído'
-        // link: 'https://www.youtube.com/'
+        certificate: 'Certificado',
+        link: 'https://udemy-certificate.s3.amazonaws.com/image/UC-40bb2c83-ea7d-4302-b028-8aa38efbec26.jpg'
     }
 ];
 

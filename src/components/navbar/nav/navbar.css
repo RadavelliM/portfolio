@@ -8,17 +8,26 @@ nav {
     color: var(--letterColor);
     box-shadow: 0 0 10px black;
 
-    width: calc(100% - 2px);
+    width: 90vw;
     height: 75px;
 
+    display: grid;
+    place-self: center;
+    position: relative;
+
+
+    border: 1px solid rgb(0, 135, 135);
+    border-radius: 40px;
+    transition: 600ms;
+    z-index: 1;
+
+}
+
+.navMainActions {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    border: 1px solid rgb(0, 135, 135);
-    transition: 600ms;
-
-    position: relative;
 }
 
 nav:hover {

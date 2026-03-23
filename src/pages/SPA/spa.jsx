@@ -14,6 +14,8 @@ export default function SPA() {
 
     useEffect(() => {
         window.document.title = "Portfólio"
+
+        document.querySelector('body').addEventListener('scroll', (e) => {alert(123)})
     }, [])
 
     return (
