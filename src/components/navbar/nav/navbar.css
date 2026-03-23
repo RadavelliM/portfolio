@@ -20,6 +20,7 @@ nav {
     border-radius: 40px;
     transition: 600ms;
 
+    z-index: 9;
 }
 
 .navMainActions {

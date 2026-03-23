@@ -13,21 +13,32 @@ const titles = ["Dev Fullstack", "Desenvolvedor de Software", "Engenheiro de Sof
 export default function MainContent() {
     const [index, setIndex] = useState(0);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setIndex((prevIndex) => {
-                return prevIndex === titles.length - 1 ? 0 : prevIndex + 1;
-            });
-        }, 2000);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setIndex((prevIndex) => {
+    //             return prevIndex === titles.length - 1 ? 0 : prevIndex + 1;
+    //         });
+    //     }, 2000);
 
-        return () => clearInterval(interval);
-    }, []);
+    //     return () => clearInterval(interval);
+    // }, []);
 
     return (
         <div className="mainContent">
-
-
-            <img src={Digital} alt="" />
+            <Galaxy
+                mouseRepulsion
+                mouseInteraction
+                density={1}
+                glowIntensity={0.3}
+                saturation={0}
+                hueShift={140}
+                twinkleIntensity={0.3}
+                rotationSpeed={0.1}
+                repulsionStrength={2}
+                autoCenterRepulsion={0}
+                starSpeed={0.5}
+                speed={1}
+            />
 
             <div className="starterText">
                 <motion.h1
