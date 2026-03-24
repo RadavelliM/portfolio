@@ -7,7 +7,7 @@
     font-family: sans-serif;
     font-size: 30px;
     text-align: center;
-    color: #f71726;
+    color: var(--letterColorAction);
     cursor: pointer;
     transition: 0.6s;
 

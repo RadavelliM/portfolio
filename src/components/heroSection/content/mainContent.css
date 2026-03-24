@@ -38,7 +38,7 @@ img {
 }
 
 .mainText span {
-    color: aqua;
+    color: var(--letterColorMain);
 }
 
 .mainText p {

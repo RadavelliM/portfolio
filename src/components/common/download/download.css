@@ -23,7 +23,7 @@
     border-radius: 10px;
 
     background-color: var(--graduationBG);
-    border: 3px solid rgb(0, 135, 135);
+    border: 3px solid var(--letterColorMain);
 
     display: flex;
     align-items: center;
@@ -43,7 +43,7 @@
 }
 
 .icon {
-    color: rgb(0, 135, 135);
+    color: var(--letterColorMain);
     transition: 600ms;
 }
 
@@ -60,10 +60,10 @@
         linear-gradient(#00030f) padding-box,
         linear-gradient(90deg,
             rgba(201,246,255,1) 0%,
-            rgba(9,9,121,1) 35%,
-            rgba(0,212,255,1) 100%);
+            rgb(77, 0, 154) 35%,
+            rgb(187, 0, 255) 100%);
 }
 
 .downloadBtn:hover .icon {
-    color: aqua;
+    color: var(--letterColorAction);
 }

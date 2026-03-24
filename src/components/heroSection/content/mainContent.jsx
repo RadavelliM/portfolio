@@ -13,18 +13,11 @@ const titles = ["Dev Fullstack", "Desenvolvedor de Software", "Engenheiro de Sof
 export default function MainContent() {
     const [index, setIndex] = useState(0);
 
-    // useEffect(() => {
-    //     const interval = setInterval(() => {
-    //         setIndex((prevIndex) => {
-    //             return prevIndex === titles.length - 1 ? 0 : prevIndex + 1;
-    //         });
-    //     }, 2000);
-
-    //     return () => clearInterval(interval);
-    // }, []);
 
     return (
         <div className="mainContent">
+            {/* <img src={Digital} alt="" /> */}
+
             <Galaxy
                 mouseRepulsion
                 mouseInteraction
@@ -40,13 +33,6 @@ export default function MainContent() {
                 speed={1}
             />
 
-            <div className="starterText">
-                <motion.h1
-                    initial={{opacity: 0}}
-                    whileInView={{opacity: 1}}
-                    transition={{delay: 0.5, duration: 3, ease: "easeOut"}}
-                > {"<"} <span>{titles[index]}</span> {"/>"}</motion.h1>
-            </div>
 
             <div className="mainText">
                 <motion.h1

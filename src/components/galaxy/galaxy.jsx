@@ -84,7 +84,7 @@ float Star(vec2 uv, float flare) {
 vec3 StarLayer(vec2 uv) {
   vec3 col = vec3(0.0);
 
-  vec2 gv = fract(uv) - 0.5; 
+  vec2 gv = fract(uv) - 0.5;
   vec2 id = floor(uv);
 
   for (int y = -1; y <= 1; y++) {
@@ -100,7 +100,7 @@ vec3 StarLayer(vec2 uv) {
       float blu = smoothstep(STAR_COLOR_CUTOFF, 1.0, Hash21(si + 3.0)) + STAR_COLOR_CUTOFF;
       float grn = min(red, blu) * seed;
       vec3 base = vec3(red, grn, blu);
-      
+
       float hue = atan(base.g - base.r, base.b - base.r) / (2.0 * 3.14159) + 0.5;
       hue = fract(hue + uHueShift / 360.0);
       float sat = length(base - vec3(dot(base, vec3(0.299, 0.587, 0.114)))) * uSaturation;
@@ -115,7 +115,7 @@ vec3 StarLayer(vec2 uv) {
       float twinkle = trisn(uTime * uSpeed + seed * 6.2831) * 0.5 + 1.0;
       twinkle = mix(1.0, twinkle, uTwinkleIntensity);
       star *= twinkle;
-      
+
       col += star * size * color;
     }
   }
@@ -128,7 +128,7 @@ void main() {
   vec2 uv = (vUv * uResolution.xy - focalPx) / uResolution.y;
 
   vec2 mouseNorm = uMouse - vec2(0.5);
-  
+
   if (uAutoCenterRepulsion > 0.0) {
     vec2 centerUV = vec2(0.0, 0.0);
     float centerDist = length(uv - centerUV);
@@ -261,8 +261,19 @@ export default function Galaxy({
     const mesh = new Mesh(gl, { geometry, program });
     let animateId;
 
+    let isVisible = true;
+
+    const observer = new IntersectionObserver(([entry]) => {
+        isVisible = entry.isIntersecting;
+    });
+
+    observer.observe(ctn);
+
     function update(t) {
       animateId = requestAnimationFrame(update);
+
+      if (!isVisible) return;
+
       if (!disableAnimation) {
         program.uniforms.uTime.value = t * 0.001;
         program.uniforms.uStarSpeed.value = (t * 0.001 * starSpeed) / 10.0;

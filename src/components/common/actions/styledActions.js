@@ -4,13 +4,13 @@ const Div = styled.div`
     a {
         margin-right: ${props => props.isNav ? '30px' : '15px'};
         margin-left: ${props => props.isNav ? '0px' : '15px'};
-        color: #f3737c;
+        color: var(--letterColorAction);
         transition: 400ms;
         display: inline-flex;
     }
 
     a:hover {
-        color: #ad5158;
+        color: white;
         transform: translateY(-5px);
     }
 
