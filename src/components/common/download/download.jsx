@@ -1,7 +1,5 @@
 import React from 'react'
 
-import GlareHover from '../../../ui/glareHover'
-
 import { FiDownload } from 'react-icons/fi'
 
 import { motion } from 'framer-motion'
