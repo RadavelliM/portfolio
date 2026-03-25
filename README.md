@@ -14,9 +14,10 @@
 * JavaScript
 * React Router para tratamento de paginas 404
 * Styled-components
-* CSS
+* CSS Modules
 * ESLint
 * Prettier
+* WebGL
 
 
 
@@ -28,6 +29,7 @@
 
 * Layout responsivo
 * Animações e transições suaves
+* Interação com a Hero Section
 * Envio de mensagens para contato através de formulário
 * Download de currículo
 * Verificação de certificados

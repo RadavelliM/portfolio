@@ -16,7 +16,7 @@ nav {
     position: relative;
 
 
-    border: 1px solid var(--letterColorMain);
+    border: 2px solid var(--letterColorMain);
     border-radius: 40px;
     transition: 600ms;
 
@@ -31,7 +31,15 @@ nav {
 }
 
 nav:hover {
-    border: 1px solid var(--letterColorAction);
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--navbarBG)) padding-box,
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 nav .brand {

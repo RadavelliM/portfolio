@@ -9,12 +9,12 @@ footer {
     color: white;
     height: 250px;
     text-align: center;
-    border-top: 3px solid rgb(0, 135, 135);
+    border-top: 3px solid var(--letterColorMain);
     transition: 600ms;
 }
 
 footer:hover{
-    border-top: 3px solid aqua;
+    border-top: 3px solid var(--letterColorAction);
 }
 
 footer .icons {

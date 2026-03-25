@@ -36,7 +36,7 @@ ul {
 }
 
 .graduationIcon {
-    color: aqua;
+    color: var(--letterColorAction);
     background-color: var(--iconBG);
     padding: 5px;
     border-radius: 7px;

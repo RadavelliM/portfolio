@@ -1,5 +1,7 @@
 import React from 'react'
 
+import GlareHover from '../../../ui/glareHover'
+
 import { FiDownload } from 'react-icons/fi'
 
 import { motion } from 'framer-motion'
@@ -12,11 +14,12 @@ export default function DownloadButton({ isAbout }) {
             isAbout
 
             ?  <motion.div
-                initial={{opacity: 0, left: "60%"}}
-                whileInView={{opacity: 1, left: "50%"}}
-                transition={{delay: 0.5, duration: 2}}
-                className="download"
-            >
+                    initial={{opacity: 0, left: "60%"}}
+                    whileInView={{opacity: 1, left: "50%"}}
+                    transition={{delay: 0.5, duration: 2}}
+                    className="download"
+                >
+
                 <a
                     className="downloadBtn"
                     href="/Profile.pdf"

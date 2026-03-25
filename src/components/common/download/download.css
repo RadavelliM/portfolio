@@ -47,21 +47,18 @@
     transition: 600ms;
 }
 
-.downloadBtnAbout:hover {
-    border: 3px solid aqua;
-    transform: translateY(-10px);
-}
-
-.downloadBtn:hover {
+.downloadBtn:hover, .downloadBtnAbout:hover {
     transform: translateY(-10px);
 
     border: 3px solid transparent;
     background:
         linear-gradient(#00030f) padding-box,
-        linear-gradient(90deg,
-            rgba(201,246,255,1) 0%,
-            rgb(77, 0, 154) 35%,
-            rgb(187, 0, 255) 100%);
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 .downloadBtn:hover .icon {

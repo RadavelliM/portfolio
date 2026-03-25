@@ -42,7 +42,7 @@ h2 {
 
 
 .language p .iconSpan {
-    color: aqua;
+    color: var(--letterColorAction);
     background-color: var(--iconBG);
     padding: 5px;
     border-radius: 7px;
@@ -92,7 +92,7 @@ h2 {
     inset: 0;
     clip-path: inherit;
     position: absolute;
-    background: rgb(0, 135, 135);
+    background: var(--letterColorMain);
     z-index: 0;
     transition: 600ms;
 }
@@ -117,7 +117,14 @@ h2 {
 }
 
 .language:hover::before {
-    background: aqua;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 .language:hover {

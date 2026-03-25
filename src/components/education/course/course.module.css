@@ -43,7 +43,7 @@
     clip-path: inherit;
     position: absolute;
     inset: 0;
-    background: rgb(0, 135, 135);
+    background: var(--letterColorMain);
     transition: 0.6s;
 }
 
@@ -77,13 +77,20 @@
 }
 
 .courseBox a {
-    color: aqua;
+    color: var(--letterColorAction);
     text-decoration: underline !important;
 }
 
 
 .courseBox:hover::before {
-    background: aqua;
+        border: 2px solid transparent;
+    background:
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 .courseBox:hover {
@@ -91,7 +98,7 @@
 }
 
 .graduationIcon {
-    color: aqua;
+    color: var(--letterColorMain);
     background-color: var(--iconBG);
     padding: 5px;
     border-radius: 7px;

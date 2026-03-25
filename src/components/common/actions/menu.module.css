@@ -2,21 +2,21 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: rgb(0, 135, 135);
+    color: var(--letterColorMain);
     transition: 600ms;
     height: 30px;
     margin-right: 20px;
 }
 
 .hamburger:hover {
-    color: aqua;
+    color: var(--letterColorAction);
 }
 
 .dialogWrapper {
     position: fixed;
     inset: 0;
     z-index: 1000;
-    display: flex; /* Ajuda a posicionar o painel */
+    display: flex;
     justify-content: flex-end;
 }
 
@@ -100,12 +100,12 @@
     background: none;
     border: none;
     cursor: pointer;
-    color: rgb(0, 135, 135);
+    color: var(--letterColorMain);
     transition: 600ms;
 }
 
 .closeBtn:hover {
-    color: aqua;
+    color: white;
 }
 
 .menuLinks {
@@ -115,10 +115,10 @@
 }
 
 .menuLinks a {
-    color: #f3737c;
+    color: var(--letterColorAction);
 }
 
 .menuLinks a:hover {
-    color: #ad5158;
+    color: white;
     transform: translateY(-5px);
 }

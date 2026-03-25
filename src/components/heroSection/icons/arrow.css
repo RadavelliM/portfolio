@@ -19,7 +19,7 @@
 }
 
 .arrow:hover {
-    color: #ad5158;
+    color: var(--letterColorMain);
 }
 
 @media (max-width: 500px) {

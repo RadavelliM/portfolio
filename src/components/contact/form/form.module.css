@@ -1,6 +1,7 @@
 :root {
     --navbarBG: rgb(42, 42, 42);
     --letterColor: white;
+    --angle: 245deg;
 }
 
 
@@ -31,7 +32,9 @@ input {
     height: 50px;
     border-radius: 10px;
     background-color: transparent;
-    border: 3px solid rgb(0, 135, 135);
+
+    border: 3px solid var(--letterColorMain);
+
     color: white;
     padding-left: 10px;
 }
@@ -41,7 +44,7 @@ input {
     color: white;
     border-radius: 10px;
     background-color: transparent;
-    border: 3px solid rgb(0, 135, 135);
+    border: 3px solid var(--letterColorMain);
     min-width: 400px;
     max-width: 400px;
     height: 175px;
@@ -57,9 +60,21 @@ input:focus ~ label, input:not(:placeholder-shown) ~ label {
     padding: 10px;
 }
 
+input:focus, input:not(:placeholder-shown) {
+    border: 2px solid var(--letterColorAction);
+}
+
 input:focus {
     outline: none;
-    border: 2px solid aqua;
+        border: 2px solid transparent;
+    background:
+        linear-gradient(#00030f) padding-box,
+        linear-gradient(
+            var(--angle),
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 
@@ -70,11 +85,25 @@ textarea:not(:placeholder-shown) ~ label {
     margin-left: 20px;
     font-size: 19px;
     padding: 0px 10px 0px 10px;
+
+}
+
+textarea:focus,
+textarea:not(:placeholder-shown) {
+    border: 2px solid var(--letterColorAction);
 }
 
 .content:focus {
     outline: none;
-    border: 2px solid aqua;
+    border: 2px solid transparent;
+    background:
+        linear-gradient(#00030f) padding-box,
+        linear-gradient(
+            90deg,
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 }
 
 input:-webkit-autofill,
@@ -87,7 +116,7 @@ input:-webkit-autofill:active {
 }
 
 .formIcon {
-    color: rgb(0, 135, 135);
+    color: var(--letterColorMain);
     position: absolute;
     margin-left: -40px;
     transition: 600ms;
@@ -100,12 +129,11 @@ input:-webkit-autofill:active {
     transition: 900ms;
     width: 420px;
     border-radius: 10px;
-    border: 3px solid rgb(0, 135, 135);
+    border: 3px solid var(--letterColorMain);
     height: 50px;
     font-size: 20px;
     cursor: pointer;
 }
-
 
 #formSubmit:hover {
     color: white;
@@ -113,13 +141,18 @@ input:-webkit-autofill:active {
     border: 3px solid transparent;
     background:
         linear-gradient(#00030f) padding-box,
-        linear-gradient(90deg,rgba(201, 246, 255, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+        linear-gradient(
+            var(--angle),
+            rgb(189, 34, 255) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgb(123, 0, 255) 100%
+        );
 
 }
 
 
 #formSubmit:hover .formIcon {
-    color:  aqua;
+    color:  var(--letterColorAction);
 }
 
 @media (max-width: 450px) {
