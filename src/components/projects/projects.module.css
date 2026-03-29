@@ -8,154 +8,169 @@ h1 {
 
 .projectsMessage {
     text-align: center;
-    font-size: 25px;
+    font-size: clamp(18px, 5vw, 25px);
+    margin-bottom: 20px;
+}
+
+.projectsMessage h2 {
+    font-size: 23px;;
 }
 
 .projectsArrowChangeSection {
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    margin: 0 50px 0 50px;
+    padding: 0 20px;
+    max-width: 80%;
+    margin: 0 auto;
 }
-
 
 .projectsArrow {
     color: var(--letterColorMain);
     font-size: 40px;
-
-    margin-top: 100px;
-
+    cursor: pointer;
     transition: 600ms;
+    z-index: 10;
 }
 
 .projectsArrow:hover {
     color: var(--letterColorAction);
 }
 
-.projectsVisualizer img {
-    width: 100%;
-    height: 450px;
-    margin-top: -35px;
-
-
-    transition: 500ms;
-
-    user-select: none;
-    position: relative;
-
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-
-}
-
 .cardContainer {
-    display: grid;
-    place-self: center;
-    width: 750px;
-    height: 600px;
-
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 90%;
+    height: 550px;
+    max-width: 700px;
+    min-height: 500px;
     background-color: var(--graduationBG);
-
     border-radius: 15px;
     border: 3px solid var(--letterColorMain);
-
-    margin-top: -120px;
-
+    overflow: hidden;
+    position: relative;
+    transition: border 500ms;
 }
 
 .cardContainer:hover {
     border: 3px solid transparent;
     background:
-        linear-gradient(var(--graduationBG)) padding-box,
-        linear-gradient(
-            90deg,
-            rgb(189, 34, 255) 0%,
-            rgba(9, 9, 121, 1) 35%,
-            rgb(123, 0, 255) 100%
-        )
+        linear-gradient(var(--graduationBG), var(--graduationBG)) padding-box,
+        linear-gradient(90deg, rgb(189, 34, 255) 0%, rgba(9, 9, 121, 1) 35%, rgb(123, 0, 255) 100%) border-box;
 }
 
-.cardContainer img {
-    display: grid;
-    place-self: center;
+.projectImg {
+    width: 100%;
+    height: 300px;
+    transition: 500ms;
 }
 
-.cardContainer:hover img {
+.cardContainer:hover .projectImg {
     filter: blur(8px);
 }
 
-.projectInfo {
-    margin-top: -115px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 100px 0 100px;
+.infoText {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    opacity: 0;
+    transition: 500ms;
+    pointer-events: none;
+    z-index: 2;
 }
 
-.viewCode a{
-    padding: 0 20px 0 20px;
+.cardContainer:hover .infoText {
+    opacity: 1;
+}
+
+.projectMainInfo {
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    background-color: var(--graduationBG);
+    border-radius: 10px;
+    padding: 5px;
+    line-height: 1.8;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
+}
+
+.projectName {
+    margin: 0;
+    font-size: 1.5rem;
 }
 
 .viewCode a {
     color: var(--letterColorMain);
     background-color: var(--iconBG);
-    padding: 7px;
+    padding: 10px 20px;
     border-radius: 7px;
-    display: inline-block;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
     transition: 500ms;
+    white-space: nowrap;
+    border: 2px solid var(--letterColorMain);
 }
 
 .viewCode a:hover {
-    transform: translateY(-10px);
-}
+    transform: translateY(-5px);
+    border: 2px solid transparent;
+    background:
+        linear-gradient(var(--graduationBG), var(--iconBG)) padding-box,
+        linear-gradient(90deg, rgb(189, 34, 255) 0%, rgba(9, 9, 121, 1) 35%, rgb(123, 0, 255) 100%) border-box;
+    color: var(--letterColorAction);
 
-
-.projectName {
-    color: white;
-}
-
-.teste {
-    display: grid;
-    place-self: center;
-    position: absolute;
-    opacity: 0;
-    transition: 500ms;
-}
-
-.cardContainer:hover .teste {
-    animation: changeText 2s 1 forwards;
-}
-
-@keyframes changeText {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-.projectMainInfo {
-    color: black;
-    text-align: center;
 }
 
 .projectStack {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 40px 0 40px;
-
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
 }
 
-.projectStack div{
+.stackItem {
     background-color: var(--iconBG);
     color: var(--letterColorAction);
-    padding: 7px;
+    padding: 6px 10px;
     border-radius: 7px;
+    font-size: 0.9rem;
+    transition: 500ms;
 }
 
-.stackInfo {
-    color: white;
+.stackItem:hover {
+    transform: translateY(-5px);
+}
+
+
+@media (min-width: 768px) {
+    .projectInfo {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 40px;
+        text-align: left;
+    }
+
+    .projectImg {
+        height: 80%;
+        height: 400px;
+    }
+
+    .infoText {
+        width: 70%;
+    }
 }

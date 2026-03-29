@@ -1,38 +1,11 @@
 import React, { useState } from 'react'
 
+import projectsIteration from './projectsIteration'
+import styles from './projects.module.css'
+
 import { motion } from 'framer-motion'
 
 import { FiArrowLeft, FiArrowRight, FiGithub } from 'react-icons/fi'
-
-import styles from './projects.module.css'
-
-import restauranteFlask from '../../assets/restaurante_flask.png'
-import gerenciamentoClientes from '../../assets/gerenciamentoClientes.png'
-import apiRest from '../../assets/api_rest.png'
-
-const projectsIteration = [
-    {
-        nome: 'Restaurante Flask',
-        img: restauranteFlask,
-        texto: "texto sobre o projeto",
-        link: 'https://github.com/RadavelliM/restarurante',
-        stack: ["HTML", "CSS", "JavaScript", "Python", "Flask", "SQL Server"]
-    },
-    {
-        nome: 'Gerenciamento de Clientes',
-        img: gerenciamentoClientes,
-        texto: "texto sobre o projeto",
-        link: 'https://github.com/RadavelliM/projeto-agenda',
-        stack: ["EJS", "CSS", "JavaScript", "Node.js", "Express", "MongoDB / Mongoose ODM"]
-    },
-    {
-        nome: 'API REST Universidade',
-        img: apiRest,
-        texto: "texto sobre o projeto",
-        link: 'https://github.com/RadavelliM/restarurante',
-        stack: ["Node.js", "Express", "MySQL", "Sequelize ORM", "GCP", "Docker / NGINX"]
-    }
-]
 
 function ProjectsCard({ nome, img, link, texto, stack }) {
     return (
@@ -45,7 +18,8 @@ function ProjectsCard({ nome, img, link, texto, stack }) {
         >
 
             <img src={img} alt={nome} className={styles.projectImg} />
-            <div className={styles.teste}>
+
+            <div className={styles.infoText}>
                 <p className={styles.projectMainInfo}>{texto}</p>
             </div>
 
@@ -59,7 +33,7 @@ function ProjectsCard({ nome, img, link, texto, stack }) {
 
             <div className={styles.projectStack}>
                 {stack.map((info, index) => (
-                    <div className={styles}>{info}</div>
+                    <div className={styles.stackItem}>{info}</div>
                 ))}
             </div>
 
@@ -81,7 +55,7 @@ export default function Projects() {
             <div className={styles.projectsMessage}>
                 <h1>Projetos Desenvolvidos</h1>
 
-                <h2>alguma mensagem sobre os projetos</h2>
+                <h2>Mostruário dos meus recentes trabalhos e habilidades técnicas</h2>
             </div>
 
             <div className={styles.projectsArrowChangeSection}>
