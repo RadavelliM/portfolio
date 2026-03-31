@@ -58,7 +58,7 @@ export default function Projects() {
                 whileInView={{opacity: 1}}
                 transition={{duration: 1, delay: 0.5}}
             >
-                <h1>Projetos Desenvolvidos</h1>
+                <h1 className={styles.projetcInit}>Projetos Desenvolvidos</h1>
 
                 <h2>Mostruário dos meus recentes trabalhos e habilidades técnicas</h2>
             </motion.div>
