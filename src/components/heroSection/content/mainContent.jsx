@@ -38,7 +38,7 @@ export default function MainContent() {
                 <motion.h1
                     initial={{opacity: 0}}
                     whileInView={{opacity: 1}}
-                    transition={{delay: 0.5, duration: 7}}
+                    transition={{delay: 0.5, duration: 2}}
                 >
                     Bem Vindo(a)!
                     <p>Eu sou</p>

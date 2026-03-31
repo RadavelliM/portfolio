@@ -1,11 +1,11 @@
 :root {
     --navbarBG: rgb(42, 42, 42);
-    --letterColor: white;
+    --letterColorMain: rgb(121, 0, 233);
 }
 
 nav {
     background-color: var(--navbarBG);
-    color: var(--letterColor);
+    color: var(--letterColorMain);
     box-shadow: 0 0 10px black;
 
     width: 90vw;
@@ -50,6 +50,6 @@ nav .brand {
     transition: 500ms;
     user-select: none;
 }
-nav .brand:hover {
+nav:hover .brand {
     color: var(--letterColorAction);
 }
