@@ -13,7 +13,7 @@ footer {
     transition: 600ms;
 }
 
-footer:hover{
+footer:hover {
     border-top: 3px solid var(--letterColorAction);
 }
 
@@ -27,13 +27,12 @@ footer .navActions {
 
 .msg .rights {
     margin-top: 50px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
 }
 
-
 @media (max-width: 500px) {
     .msg .rights {
-    margin-top: 15px;
-}
+        margin-top: 15px;
+    }
 }

@@ -14,7 +14,16 @@
 }
 
 .graduationInfo {
-    clip-path: polygon(10% 0%, 100% 0, 100% 10%, 100% 90%, 90% 100%, 10% 100%, 0 100%, 0% 10%);
+    clip-path: polygon(
+        10% 0%,
+        100% 0,
+        100% 10%,
+        100% 90%,
+        90% 100%,
+        10% 100%,
+        0 100%,
+        0% 10%
+    );
     background-color: var(--graduationBG);
     color: white;
     padding: 20px;
@@ -30,7 +39,6 @@
     align-items: center;
 
     position: relative;
-
 }
 
 h3 {
@@ -63,14 +71,13 @@ h3 {
 }
 
 .graduationInfo:hover::before {
-        border: 2px solid transparent;
-    background:
-        linear-gradient(
-            90deg,
-            rgb(189, 34, 255) 0%,
-            rgba(9, 9, 121, 1) 35%,
-            rgb(123, 0, 255) 100%
-        );
+    border: 2px solid transparent;
+    background: linear-gradient(
+        90deg,
+        rgb(189, 34, 255) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgb(123, 0, 255) 100%
+    );
 }
 
 .graduationInfo p {
@@ -84,7 +91,6 @@ h3 {
     flex-wrap: wrap;
 }
 
-
 .graduationInfo p a {
     color: rgb(168, 168, 168);
     font-size: 30px;
@@ -93,18 +99,11 @@ h3 {
     transition: 0.4s;
 }
 
-
-
 .graduationInfo p a:hover {
     color: grey;
 }
 
-
-
-
-
 @media (max-width: 730px) {
-
     .graduationInfo {
         clip-path: none;
         border-radius: 20px;
@@ -126,7 +125,6 @@ h3 {
 }
 
 @media (max-width: 710px) {
-
     .graduationInfo {
         clip-path: none;
         border-radius: 20px;

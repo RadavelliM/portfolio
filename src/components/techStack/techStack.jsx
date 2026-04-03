@@ -1,10 +1,10 @@
-import React from 'react'
-import { motion } from 'framer-motion'
+import React from "react";
+import { motion } from "framer-motion";
 
-import { LuCode, LuComputer, LuSettings } from 'react-icons/lu'
-import { FaServer, FaDatabase, FaTools } from 'react-icons/fa'
+import { LuCode, LuComputer, LuSettings } from "react-icons/lu";
+import { FaServer, FaDatabase, FaTools } from "react-icons/fa";
 
-import './techStack.css'
+import "./techStack.css";
 
 const techSections = [
     {
@@ -47,7 +47,7 @@ const techSections = [
             }
         ]
     }
-]
+];
 
 function TechCard({ title, icon: Icon, techs }) {
     return (
@@ -67,13 +67,12 @@ function TechCard({ title, icon: Icon, techs }) {
                 <p key={index}>{tech}</p>
             ))}
         </motion.div>
-    )
+    );
 }
 
 export default function TechStack() {
     return (
-        <div id='techStack' className="techStack">
-
+        <div id="techStack" className="techStack">
             <div className="techIntroduction">
                 <motion.h1
                     initial={{ opacity: 0 }}
@@ -90,15 +89,15 @@ export default function TechStack() {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    Conjunto de tecnologias e ferramentas que utilizo para desenvolver
-                    aplicações modernas, escaláveis e de alta performance.
+                    Conjunto de tecnologias e ferramentas que utilizo para
+                    desenvolver aplicações modernas, escaláveis e de alta
+                    performance.
                 </motion.h4>
             </div>
 
             <div className="stack">
                 {techSections.map((section, sectionIndex) => (
                     <React.Fragment key={sectionIndex}>
-
                         <div className="sectionMessage">
                             <motion.h2
                                 initial={{ opacity: 0 }}
@@ -118,10 +117,9 @@ export default function TechStack() {
                                 techs={item.techs}
                             />
                         ))}
-
                     </React.Fragment>
                 ))}
             </div>
         </div>
-    )
+    );
 }

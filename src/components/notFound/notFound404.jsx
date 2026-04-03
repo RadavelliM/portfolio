@@ -1,16 +1,13 @@
-import React, { useEffect } from 'react'
+import React, { useEffect } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './notFound404.css'
+import "./notFound404.css";
 
 export default function NotFoundContent() {
-
     return (
         <div className="pageNotFound">
-
             <div className="notFoundMsg">
-
                 <div className="starterMsg">
                     <h1>Oops...</h1>
                 </div>
@@ -18,9 +15,7 @@ export default function NotFoundContent() {
                 <div className="mainMsg">
                     <h1>Parece que a página que você procura não existe</h1>
                 </div>
-
             </div>
-
         </div>
-    )
-};
+    );
+}

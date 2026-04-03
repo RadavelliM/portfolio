@@ -6,12 +6,12 @@
 
 .languageTitle {
     font-size: 55px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 h2 {
     color: rgb(168, 168, 168);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .languages {
@@ -39,8 +39,6 @@ h2 {
     margin-bottom: 75px;
 }
 
-
-
 .language p .iconSpan {
     color: var(--letterColorAction);
     background-color: var(--iconBG);
@@ -61,7 +59,7 @@ h2 {
     display: block;
 }
 
-.language p .idiom{
+.language p .idiom {
     display: flex;
     justify-self: center;
 }
@@ -83,7 +81,16 @@ h2 {
     place-self: center;
 
     text-align: center;
-    clip-path: polygon(0 0, 85% 0, 100% 15%, 100% 100%, 70% 100%, 15% 100%, 0 85%, 0% 30%);
+    clip-path: polygon(
+        0 0,
+        85% 0,
+        100% 15%,
+        100% 100%,
+        70% 100%,
+        15% 100%,
+        0 85%,
+        0% 30%
+    );
     transition: 600ms;
 }
 
@@ -118,19 +125,17 @@ h2 {
 
 .language:hover::before {
     border: 2px solid transparent;
-    background:
-        linear-gradient(
-            90deg,
-            rgb(189, 34, 255) 0%,
-            rgba(9, 9, 121, 1) 35%,
-            rgb(123, 0, 255) 100%
-        );
+    background: linear-gradient(
+        90deg,
+        rgb(189, 34, 255) 0%,
+        rgba(9, 9, 121, 1) 35%,
+        rgb(123, 0, 255) 100%
+    );
 }
 
 .language:hover {
     transform: translateY(-10px);
 }
-
 
 @media (max-width: 500px) {
     .languageTitle {

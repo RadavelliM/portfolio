@@ -1,19 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import { motion } from 'framer-motion'
-import { LuSend } from 'react-icons/lu'
+import { motion } from "framer-motion";
+import { LuSend } from "react-icons/lu";
 
-import { toast, ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css';
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-import styles from './form.module.css'
-
-const formFields = [
-    { type: "text", name: "name", id: "name", label: "Nome" },
-    { type: "email", name: "email", id: "email", label: "Email" },
-    { type: "text", name: "subject", id: "subject", label: "Assunto" },
-    { type: "textarea", name: "content", id: "content", label: "Conteúdo" }
-]
+import styles from "./form.module.css";
+import formFields from "./form";
 
 function FormField({ type, name, id, label }) {
     return (
@@ -25,7 +19,7 @@ function FormField({ type, name, id, label }) {
                         name={name}
                         id={id}
                         placeholder=""
-                        autoComplete='off'
+                        autoComplete="off"
                     />
                     <label htmlFor={id}>{label}</label>
                 </>
@@ -41,17 +35,19 @@ function FormField({ type, name, id, label }) {
                 </>
             )}
         </div>
-    )
+    );
 }
 
 const encode = (data) => {
     return Object.keys(data)
-        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .map(
+            (key) =>
+                encodeURIComponent(key) + "=" + encodeURIComponent(data[key])
+        )
         .join("&");
-}
+};
 
 export default function Form() {
-
     const handleSubmit = (e) => {
         e.preventDefault();
         const form = e.target;
@@ -63,13 +59,13 @@ export default function Form() {
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({ "form-name": form.getAttribute("name"), ...data })
         })
-        .then(() => {
-            toast.success("Mensagem enviada com sucesso!");
-            form.reset();
-        })
-        .catch((error) => {
-            toast.error("Erro ao enviar: " + error);
-        });
+            .then(() => {
+                toast.success("Mensagem enviada com sucesso!");
+                form.reset();
+            })
+            .catch((error) => {
+                toast.error("Erro ao enviar: " + error);
+            });
     };
 
     return (
@@ -82,13 +78,15 @@ export default function Form() {
 
             <motion.form
                 data-netlify="true"
-                name='contato'
-                method='POST'
+                name="contato"
+                method="POST"
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 1, duration: 1 }}
                 action=""
-                onSubmit={(e) => {handleSubmit(e)}}
+                onSubmit={(e) => {
+                    handleSubmit(e);
+                }}
             >
                 <input type="hidden" name="form-name" value="contato" />
 
@@ -103,15 +101,12 @@ export default function Form() {
                 ))}
 
                 <div className={styles.formInput}>
-                    <button
-                        id={styles.formSubmit}
-                        type="submit"
-                    >
+                    <button id={styles.formSubmit} type="submit">
                         <LuSend className={styles.formIcon} />
                         Enviar Mensagem
                     </button>
                 </div>
             </motion.form>
         </>
-    )
+    );
 }

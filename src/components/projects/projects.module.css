@@ -1,8 +1,9 @@
 * {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.projectName, .projetcInit {
+.projectName,
+.projetcInit {
     color: white;
 }
 
@@ -13,7 +14,7 @@
 }
 
 .projectsMessage h2 {
-    font-size: 23px;;
+    font-size: 23px;
 }
 
 .projectsArrowChangeSection {
@@ -57,7 +58,13 @@
     border: 3px solid transparent;
     background:
         linear-gradient(var(--graduationBG), var(--graduationBG)) padding-box,
-        linear-gradient(90deg, rgb(189, 34, 255) 0%, rgba(9, 9, 121, 1) 35%, rgb(123, 0, 255) 100%) border-box;
+        linear-gradient(
+                90deg,
+                rgb(189, 34, 255) 0%,
+                rgba(9, 9, 121, 1) 35%,
+                rgb(123, 0, 255) 100%
+            )
+            border-box;
 }
 
 .projectImg {
@@ -90,7 +97,7 @@
     color: white;
     text-align: center;
     font-weight: bold;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     background-color: var(--graduationBG);
     border-radius: 10px;
     padding: 5px;
@@ -130,9 +137,14 @@
     border: 2px solid transparent;
     background:
         linear-gradient(var(--graduationBG), var(--iconBG)) padding-box,
-        linear-gradient(90deg, rgb(189, 34, 255) 0%, rgba(9, 9, 121, 1) 35%, rgb(123, 0, 255) 100%) border-box;
+        linear-gradient(
+                90deg,
+                rgb(189, 34, 255) 0%,
+                rgba(9, 9, 121, 1) 35%,
+                rgb(123, 0, 255) 100%
+            )
+            border-box;
     color: var(--letterColorAction);
-
 }
 
 .projectStack {
@@ -155,7 +167,6 @@
 .stackItem:hover {
     transform: translateY(-5px);
 }
-
 
 @media (min-width: 768px) {
     .projectInfo {

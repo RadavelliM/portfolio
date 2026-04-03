@@ -1,4 +1,3 @@
-
 .starterText {
     position: absolute;
     top: 10%;
@@ -53,7 +52,7 @@
         transform: translate(-50%, -80%);
     }
 
-    .mainText span{
+    .mainText span {
         top: 26%;
     }
 }
@@ -70,8 +69,13 @@
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+    0%,
+    100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
 }
 
 @media (max-width: 800px) {
@@ -92,7 +96,6 @@
         font-size: 50px;
     }
 }
-
 
 @media (max-width: 1000px) {
     .starterText {

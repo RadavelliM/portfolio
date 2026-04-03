@@ -1,4 +1,4 @@
-# Portfólio pessoal desenvolvido com React + Vite.
+<h1 align="center"> Portfólio pessoal desenvolvido com React + Vite. <img style="transform: translateY(-5px);" align="center" src="https://camo.githubusercontent.com/afdf5a3b933086604f6acf89a8fa2a321aaa6d912919c573f87545587a59333f/68747470733a2f2f74656368737461636b2d67656e657261746f722e76657263656c2e6170702f72656163742d69636f6e2e737667" width="50"/> </h1>
 
 <u></u>
 

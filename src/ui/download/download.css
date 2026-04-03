@@ -17,7 +17,8 @@
     place-self: center;
 }
 
-.downloadBtn, .downloadBtnAbout {
+.downloadBtn,
+.downloadBtnAbout {
     width: 240px;
     height: 45px;
     border-radius: 10px;
@@ -47,7 +48,8 @@
     transition: 600ms;
 }
 
-.downloadBtn:hover, .downloadBtnAbout:hover {
+.downloadBtn:hover,
+.downloadBtnAbout:hover {
     transform: translateY(-10px);
 
     border: 3px solid transparent;

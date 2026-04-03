@@ -1,38 +1,32 @@
-import React, { useState, Fragment } from 'react'
+import React, { useState, Fragment } from "react";
 
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import { Dialog, Transition } from '@headlessui/react'
-import { LuMenu, LuX } from 'react-icons/lu'
-import styles from './menu.module.css'
+import { Dialog, Transition } from "@headlessui/react";
+import { LuMenu, LuX } from "react-icons/lu";
+import styles from "./menu.module.css";
 
 const navItems = [
-  { label: "Início", href: "#home" },
-  { label: "Sobre", href: "#about" },
-  { label: "Formação", href: "#education" },
-  { label: "Stack", href: "#techStack" },
-  { label: "Idiomas", href: "#idioms" },
-  { label: "Projetos", href: "#projects" },
-  { label: "Contato", href: "#contact" }
+    { label: "Início", href: "#home" },
+    { label: "Sobre", href: "#about" },
+    { label: "Formação", href: "#education" },
+    { label: "Stack", href: "#techStack" },
+    { label: "Idiomas", href: "#idioms" },
+    { label: "Projetos", href: "#projects" },
+    { label: "Contato", href: "#contact" }
 ];
 
 export default function NavMenu({ isNotFound }) {
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
 
     return (
         <>
-            <button
-                className={styles.hamburger}
-                onClick={() => setOpen(true)}
-            >
+            <button className={styles.hamburger} onClick={() => setOpen(true)}>
                 <LuMenu size={30} />
             </button>
 
             <Transition show={open} as={Fragment}>
-                <Dialog
-                    onClose={setOpen}
-                    className={styles.dialogWrapper}
-                >
+                <Dialog onClose={setOpen} className={styles.dialogWrapper}>
                     <Transition.Child
                         as={Fragment}
                         enter={styles.overlayEnter}
@@ -63,17 +57,26 @@ export default function NavMenu({ isNotFound }) {
                             </button>
 
                             <div className={styles.menuLinks}>
-                                {isNotFound
-                                    ? <Link className='navActions' to="/">Página inicial</Link>
-                                    : navItems.map((info, index) => (
-                                    <a key={index} href={info.href} onClick={() => setOpen(false)}>{info.label}</a>
-                                ))
-                                }
+                                {isNotFound ? (
+                                    <Link className="navActions" to="/">
+                                        Página inicial
+                                    </Link>
+                                ) : (
+                                    navItems.map((info, index) => (
+                                        <a
+                                            key={index}
+                                            href={info.href}
+                                            onClick={() => setOpen(false)}
+                                        >
+                                            {info.label}
+                                        </a>
+                                    ))
+                                )}
                             </div>
                         </Dialog.Panel>
                     </Transition.Child>
                 </Dialog>
             </Transition>
         </>
-    )
+    );
 }
