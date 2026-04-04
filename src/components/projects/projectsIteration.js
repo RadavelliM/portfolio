@@ -50,7 +50,7 @@ const projectsIteration = [
             com arquitetura monolítica MVC (Model-View-Controller),
             e banco de dados relacional SQL Server
         `,
-        link: "https://github.com/RadavelliM/restarurante",
+        link: "https://github.com/RadavelliM/gerenciamento-restaurante",
         stack: ["HTML", "CSS", "JavaScript", "Python", "Flask", "SQL Server"]
     }
 ];
