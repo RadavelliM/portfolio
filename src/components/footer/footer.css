@@ -25,8 +25,11 @@ footer .navActions {
     margin-top: 140px;
 }
 
+.development {
+    font-size: 18px;
+}
+
 .msg .rights {
-    margin-top: 50px;
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
 }

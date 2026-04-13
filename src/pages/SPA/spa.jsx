@@ -9,6 +9,7 @@ import Education from "../../components/education/education";
 import Contact from "../../components/contact/contact";
 import Languages from "../../components/languages/languages";
 import Projects from "../../components/projects/projects";
+import SoftSkills from "../../ui/skills/softskills";
 import Footer from "../../components/footer/footer";
 
 export default function SPA() {
@@ -26,6 +27,8 @@ export default function SPA() {
             <Education />
             <DivisorSpace space="400px" />
             <TechStack />
+            <DivisorSpace space="200px" />
+            <SoftSkills />
             <DivisorSpace space="300px" />
             <Languages />
             <DivisorSpace space="100px" />
