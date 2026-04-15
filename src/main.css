@@ -1,8 +1,12 @@
 :root {
     --graduationBG: rgb(59, 59, 59);
     --iconBG: rgb(42, 42, 42);
+
     --letterColorAction: rgb(183, 28, 255);
     --letterColorMain: rgb(121, 0, 233);
+
+    --letterColorDescription: rgb(168, 168, 168);
+    --letterFontSizeDescription: 25px;
 }
 
 body {

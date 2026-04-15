@@ -3,45 +3,52 @@ import { gsap } from "gsap";
 import "./skills.css";
 
 const DEFAULT_PARTICLE_COUNT = 12;
-const DEFAULT_SPOTLIGHT_RADIUS = 300;
+const DEFAULT_SPOTLIGHT_RADIUS = 600;
 const DEFAULT_GLOW_COLOR = "132, 0, 255";
 const MOBILE_BREAKPOINT = 768;
 
 const cardData = [
     {
         color: "#060010",
-        description:
-            "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
+        description: `
+            Busco antecipar problemas e agir antes que se tornem obstáculos,
+            propondo melhorias e novas soluções de forma constante
+        `,
+        label: "Proatividade"
+    },
+    {
+        color: "#060010",
+        description: `
+            Busco sempre evoluir, aprendendo novas ferramentas e tecnologias,
+            bem como a melhora constante de boas práticas de desenvolvimento
+        `,
+        label: "Aprendizado contínuo"
+    },
+    {
+        color: "#060010",
+        description: `
+            Prezo por uma comunicação clara e objetiva, facilitando o entendimento entre as pessoas.
+            Possuo boa oratória para apresentação de trabalhos, projetos e ideias.
+        `,
+        label: "Comunicação"
     },
     {
         color: "#060010",
         description:
-            "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
+            "Colaboro de forma ativa com a equipe, contribuindo para um ambiente produtivo e alinhado.",
+        label: "Trabalho em equipe"
     },
     {
         color: "#060010",
         description:
-            "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
+            "Analiso desafios com pensamento lógico e busco soluções eficientes, equilibrando rapidez e qualidade.",
+        label: "Resolução de problemas"
     },
     {
         color: "#060010",
         description:
-            "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
-    },
-    {
-        color: "#060010",
-        description:
-            "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
-    },
-    {
-        color: "#060010",
-        description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
-        label: "titulo"
+            "Gerencio tarefas e prioridades de forma estruturada e roteirizada, garantindo produtividade e gerenciamento de tempo.",
+        label: "Organização"
     }
 ];
 

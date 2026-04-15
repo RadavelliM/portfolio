@@ -8,6 +8,10 @@ export default function SoftSkills() {
         <div className="softskills">
             <div className={styles.skillsinfo}>
                 <h1 className={styles.skillsTitle}>Soft Skills</h1>
+                <h3 className={styles.skillsDesc}>
+                    Confira abaixo o conjunto e a descrição das minhas
+                    habilidades comportamentais
+                </h3>
             </div>
 
             <Skills

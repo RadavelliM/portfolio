@@ -20,7 +20,7 @@
 }
 
 .SkillsCard {
-    width: 75vw;
+    width: 70vw;
     display: grid;
     place-self: center;
 }
@@ -37,7 +37,7 @@
     justify-content: space-between;
     position: relative;
     aspect-ratio: 4/2.5;
-    min-height: 200px;
+    min-height: 250px;
     width: 100%;
     max-width: 100%;
     border-radius: 20px;
@@ -77,19 +77,13 @@
 
 .magic-bento-card__label {
     font-size: 20px;
-    margin-top: 15px;
+    margin: 15px 10px 0px 10px;
+    transition: 600ms;
 }
 
-.magic-bento-card__title,
 .magic-bento-card__description {
     color: white;
-    font-size: 15px !important;
-}
-
-.magic-bento-card__title {
-    font-weight: 400;
-    font-size: 16px;
-    margin: 0 0 0.25em;
+    font-size: 16px !important;
 }
 
 .magic-bento-card__description {
@@ -98,6 +92,15 @@
     opacity: 0.9;
     margin: 10px;
     margin-bottom: 15px;
+    opacity: 0;
+    transition: 600ms;
+}
+.magic-bento-card:hover .magic-bento-card__description {
+    opacity: 1;
+}
+.magic-bento-card:hover .magic-bento-card__label {
+    letter-spacing: 3px;
+    transform: scale(1.05);
 }
 
 .magic-bento-card--text-autohide .magic-bento-card__title,
