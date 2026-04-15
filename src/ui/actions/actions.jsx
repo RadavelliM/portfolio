@@ -7,7 +7,7 @@ const navItems = [
     { label: "Início", href: "#home" },
     { label: "Sobre", href: "#about" },
     { label: "Formação", href: "#education" },
-    { label: "Stack", href: "#techStack" },
+    { label: "Skills", href: "#techStack" },
     { label: "Idiomas", href: "#idioms" },
     { label: "Projetos", href: "#projects" },
     { label: "Contato", href: "#contact" }

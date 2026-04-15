@@ -18,6 +18,7 @@
 * ESLint
 * Prettier
 * WebGL
+* GSAP
 
 
 
@@ -29,7 +30,7 @@
 
 * Layout responsivo
 * Animações e transições suaves
-* Interação com a Hero Section
+* Interação com a Hero Section animada
 * Envio de mensagens para contato através de formulário
 * Download de currículo
 * Visualização de projetos pessoais
