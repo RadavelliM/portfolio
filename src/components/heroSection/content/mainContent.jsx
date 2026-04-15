@@ -56,7 +56,7 @@ export default function MainContent() {
                 className="mainContentText"
             >
                 <p>
-                    Desenvolvedora Fullstack construindo aplicações modernas e
+                    Desenvolvedor Fullstack construindo aplicações modernas e
                     responsivas para a web com as melhores tecnologias
                 </p>
             </motion.div>

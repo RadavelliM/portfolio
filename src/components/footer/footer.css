@@ -11,6 +11,7 @@ footer {
     text-align: center;
     border-top: 3px solid var(--letterColorMain);
     transition: 600ms;
+    padding: 30px;
 }
 
 footer:hover {
@@ -29,6 +30,11 @@ footer .navActions {
     font-size: 18px;
 }
 
+.msg {
+    position: relative;
+    margin-top: 30px;
+}
+
 .msg .rights {
     font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
     color: white;
@@ -37,5 +43,10 @@ footer .navActions {
 @media (max-width: 500px) {
     .msg .rights {
         margin-top: 15px;
+    }
+}
+@media (max-width: 800px) {
+    footer {
+        height: 300px;
     }
 }

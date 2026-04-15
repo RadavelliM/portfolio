@@ -17,6 +17,7 @@ export default function Footer() {
             <Actions isNav={false} />
 
             <div className="msg">
+                <h3 className="">Desenvolvido com React, Vite, GSAP, WebGL</h3>
                 <h3 className="rights">
                     Henrique Radavelli Machado - {currentYear()}
                 </h3>
