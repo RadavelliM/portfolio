@@ -5,6 +5,8 @@ import { ReactTyped } from "react-typed";
 
 import Galaxy from "../../galaxy/galaxy";
 
+import digital from "../../../assets/digital.png";
+
 import "./mainContent.css";
 
 export default function MainContent() {

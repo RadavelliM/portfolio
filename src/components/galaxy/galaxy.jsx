@@ -1,6 +1,8 @@
-import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import { useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+import { Renderer, Program, Mesh, Color, Triangle } from "ogl";
 import "./galaxy.css";
+import MainContent from "../heroSection/content/mainContent";
 
 const vertexShader = `
 attribute vec2 uv;
@@ -194,14 +196,21 @@ export default function Galaxy({
     const smoothMousePos = useRef({ x: 0.5, y: 0.5 });
     const targetMouseActive = useRef(0.0);
     const smoothMouseActive = useRef(0.0);
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (!ctnDom.current) return;
         const ctn = ctnDom.current;
-        const renderer = new Renderer({
-            alpha: transparent,
-            premultipliedAlpha: false
-        });
+
+        let renderer;
+        try {
+            renderer = new Renderer({
+                alpha: transparent,
+                premultipliedAlpha: false
+            });
+        } catch (e) {
+            return;
+        }
         const gl = renderer.gl;
 
         if (transparent) {
@@ -350,12 +359,15 @@ export default function Galaxy({
 
         return () => {
             cancelAnimationFrame(animateId);
+            observer.disconnect();
             window.removeEventListener("resize", resize);
             if (mouseInteraction) {
                 ctn.removeEventListener("mousemove", handleMouseMove);
                 ctn.removeEventListener("mouseleave", handleMouseLeave);
             }
-            ctn.removeChild(gl.canvas);
+            if (gl.canvas.parentNode === ctn) {
+                ctn.removeChild(gl.canvas);
+            }
             gl.getExtension("WEBGL_lose_context")?.loseContext();
         };
     }, [
@@ -374,7 +386,8 @@ export default function Galaxy({
         rotationSpeed,
         repulsionStrength,
         autoCenterRepulsion,
-        transparent
+        transparent,
+        navigate
     ]);
 
     return <div ref={ctnDom} className="galaxy-container" {...rest} />;

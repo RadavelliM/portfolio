@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 
-import { Link } from "react-router-dom";
-
 import "./notFound404.css";
 
 export default function NotFoundContent() {
