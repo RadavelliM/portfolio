@@ -33,7 +33,7 @@ const techSections = [
             {
                 title: "Ferramentas",
                 icon: FaTools,
-                techs: ["VS Code", "Insomnia / Postman", "Figma"]
+                techs: ["VS Code", "Insomnia / Postman", "Linux"]
             },
             {
                 title: "Plataformas",

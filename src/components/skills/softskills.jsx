@@ -1,11 +1,19 @@
 import React from "react";
 
+import { motion } from "framer-motion";
+
 import styles from "./softskills.module.css";
 import Skills from "./skills";
 
 export default function SoftSkills() {
     return (
-        <div className="softskills">
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="softskills"
+        >
             <div className={styles.skillsinfo}>
                 <h1 className={styles.skillsTitle}>Soft Skills</h1>
                 <h3 className={styles.skillsDesc}>
@@ -27,6 +35,6 @@ export default function SoftSkills() {
                 glowColor="132, 0, 255"
                 disableAnimations={false}
             />
-        </div>
+        </motion.div>
     );
 }
