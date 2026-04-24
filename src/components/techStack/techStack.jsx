@@ -52,13 +52,7 @@ const techSections = [
 
 function TechCard({ title, icon: Icon, techs }) {
     return (
-        <motion.div
-            className="skilltech"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6 }}
-        >
+        <div className="skilltech">
             <div className="techHeader">
                 <Icon className="icon" />
                 <h3>{title}</h3>
@@ -67,7 +61,7 @@ function TechCard({ title, icon: Icon, techs }) {
             {techs.map((tech, index) => (
                 <p key={index}>{tech}</p>
             ))}
-        </motion.div>
+        </div>
     );
 }
 
@@ -111,7 +105,13 @@ export default function TechStack() {
                         </div>
 
                         {section.items.map((item, index) => (
-                            <div className="glowingCardTechStack">
+                            <motion.div
+                                className="glowingCardTechStack"
+                                initial={{ opacity: 0, y: 40 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, amount: 0.3 }}
+                                transition={{ duration: 0.6 }}
+                            >
                                 <BorderGlow
                                     edgeSensitivity={0}
                                     glowColor="80 80 80"
@@ -132,7 +132,7 @@ export default function TechStack() {
                                         />
                                     </div>
                                 </BorderGlow>
-                            </div>
+                            </motion.div>
                         ))}
                     </React.Fragment>
                 ))}
