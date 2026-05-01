@@ -1,6 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import { ReactTyped } from "react-typed";
+
 import { LuCode, LuComputer, LuSettings } from "react-icons/lu";
 import { FaServer, FaDatabase, FaTools } from "react-icons/fa";
 import BorderGlow from "../../ui/borderGlow/hoverComponent";
@@ -75,7 +77,20 @@ export default function TechStack() {
                     viewport={{ once: true }}
                     transition={{ duration: 1 }}
                 >
-                    Habilidades & Tecnologias
+                    <ReactTyped
+                        strings={[
+                            "Habilidades e Tecnologias",
+                            "Hard Skills",
+                            "Stack Técnica",
+                            "Competências funcionais"
+                        ]}
+                        typeSpeed={100}
+                        backSpeed={100}
+                        backDelay={4000}
+                        startDelay={500}
+                        showCursor={true}
+                        loop
+                    />
                 </motion.h1>
 
                 <motion.h4
