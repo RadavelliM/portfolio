@@ -24,8 +24,8 @@ export default function DownloadButton({ isAbout }) {
         >
             <a
                 className={config.buttonClass}
-                href="/Profile.pdf"
-                download="Curriculo.pdf"
+                href="/Curriculo.pdf"
+                download="CurriculoHenriqueRadavelli.pdf"
             >
                 <FiDownload className="icon" />
                 Baixar Currículo

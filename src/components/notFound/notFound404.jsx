@@ -7,7 +7,7 @@ export default function NotFoundContent() {
         <div className="pageNotFound">
             <div className="notFoundMsg">
                 <div className="starterMsg">
-                    <h1>Oops...</h1>
+                    <h1>404</h1>
                 </div>
 
                 <div className="mainMsg">
